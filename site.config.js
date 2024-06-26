@@ -6,9 +6,9 @@ const CONFIG = {
     role: "AI student, aspiring Robotics Engineer",
     bio: "Failing CAPTCHA since 2003",
     email: "l.m.quiros.conesa@student.rug.nl",
-    linkedin: "Laura M Quirós Conesa",
+    linkedin: "lauramquiros",
     github: "LauraMQuiros",
-    instagram: "",
+    instagram: "laura.m.quiros",
   },
   projects: [
     {
