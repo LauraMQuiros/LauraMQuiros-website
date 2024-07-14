@@ -13,7 +13,7 @@ const CONFIG = {
   projects: [
     {
       name: `this website`,
-      href: "https://github.com/LauraMQuiros/Website_fork",
+      href: "https://github.com/LauraMQuiros/LauraMQuiros-website",
     },
   ],
   // blog setting (required)
