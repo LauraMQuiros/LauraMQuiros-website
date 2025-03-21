@@ -8,6 +8,7 @@ const CONFIG = {
     email: "l.m.quiros.conesa@student.rug.nl",
     linkedin: "lauramquiros",
     github: "LauraMQuiros",
+    instagram: "",
   },
   projects: [
     {
