@@ -12,8 +12,7 @@ const TagList: React.FC<Props> = () => {
   const router = useRouter()
   const currentTag = router.query.tag || undefined
   const data = useTagsQuery()
-  const filePath = path.join(process.cwd(), "debugTags.json");
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  console.log(data)
 
   const handleClickTag = (value: any) => {
     // delete
