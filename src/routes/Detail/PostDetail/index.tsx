@@ -19,15 +19,22 @@ const PostDetail: React.FC<Props> = () => {
     <StyledWrapper>
       <article>
         {(() => {
-          // handle string | string[] | undefined safely
           const categories = Array.isArray(data.category)
             ? data.category
             : data.category
             ? [data.category]
             : []
+
           return (
             categories.length > 0 && (
-              <div css={{ marginBottom: "0.5rem" }}>
+              <div
+                css={{
+                  display: "flex",
+                  flexWrap: "wrap", // optional: allows wrapping to next line
+                  gap: "0.5rem",    // spacing between items
+                  marginBottom: "0.5rem",
+                }}
+              >
                 {categories.map((category) => (
                   <Category
                     key={category}
@@ -42,9 +49,11 @@ const PostDetail: React.FC<Props> = () => {
         })()}
 
         {data.type[0] === "Post" && <PostHeader data={data} />}
+
         <div>
           <NotionRenderer recordMap={data.recordMap} />
         </div>
+
         {data.type[0] === "Post" && (
           <>
             <Footer />
@@ -54,6 +63,7 @@ const PostDetail: React.FC<Props> = () => {
       </article>
     </StyledWrapper>
   )
+
   //return (
   //  <StyledWrapper>
   //    <article>

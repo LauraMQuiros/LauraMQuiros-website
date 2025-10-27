@@ -3,16 +3,17 @@ import { useRouter } from "next/router"
 import React from "react"
 import { Emoji } from "src/components/Emoji"
 import { useTagsQuery } from "src/hooks/useTagsQuery"
+import fs from "fs"
+import path from "path";
 
 type Props = {}
 
 const TagList: React.FC<Props> = () => {
   const router = useRouter()
   const currentTag = router.query.tag || undefined
-  const dataTag = useTagsQuery()
-  const data = Object.entries(dataTag)
-    .filter(([_, count]) => count > 0)
-    .map(([tag]) => tag)
+  const data = useTagsQuery()
+  const filePath = path.join(process.cwd(), "debugTags.json");
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 
   const handleClickTag = (value: any) => {
     // delete
