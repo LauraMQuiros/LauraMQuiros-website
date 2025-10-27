@@ -15,5 +15,6 @@ export function getAllSelectItemsFromPosts(
       itemObj[item] = 1
     }
   })
+  console.log(itemObj)
   return itemObj
 }
