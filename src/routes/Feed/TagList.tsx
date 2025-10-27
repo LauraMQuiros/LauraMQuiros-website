@@ -9,7 +9,10 @@ type Props = {}
 const TagList: React.FC<Props> = () => {
   const router = useRouter()
   const currentTag = router.query.tag || undefined
-  const data = useTagsQuery()
+  const dataTag = useTagsQuery()
+  const data = Object.entries(dataTag)
+    .filter(([_, count]) => count > 0)
+    .map(([tag]) => tag)
 
   const handleClickTag = (value: any) => {
     // delete
