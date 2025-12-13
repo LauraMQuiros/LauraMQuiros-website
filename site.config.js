@@ -3,7 +3,7 @@ const CONFIG = {
   profile: {
     name: "Laura M Quirós",
     image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
-    role: "AI student, aspiring Robotics Engineer",
+    role: "AI & Robotics Engineer",
     bio: "Failing CAPTCHA since 2003",
     email: "lmqc@kth.se",
     linkedin: "lauramquiros",
@@ -23,7 +23,7 @@ const CONFIG = {
   },
 
   // CONFIG configration (required)
-  link: "https://website-fork-wheat.vercel.app",
+  link: "https://laura-log.vercel.app",
   since: 2024, // If leave this empty, current year will be used.
   lang: "en-US", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash

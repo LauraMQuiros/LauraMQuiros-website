@@ -3,6 +3,8 @@ import { useRouter } from "next/router"
 import React from "react"
 import { Emoji } from "src/components/Emoji"
 import { useTagsQuery } from "src/hooks/useTagsQuery"
+import fs from "fs"
+import path from "path";
 
 type Props = {}
 
@@ -10,6 +12,7 @@ const TagList: React.FC<Props> = () => {
   const router = useRouter()
   const currentTag = router.query.tag || undefined
   const data = useTagsQuery()
+  // console.log(data)
 
   const handleClickTag = (value: any) => {
     // delete
